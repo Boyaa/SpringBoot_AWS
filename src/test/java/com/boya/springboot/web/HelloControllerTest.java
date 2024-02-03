@@ -12,7 +12,7 @@ import static org.hamcrest.Matchers.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-@WebMvcTest(controllers = HelloController.class)
+@WebMvcTest(controllers = HelloController.class) // JPA 기능 작동하지 않음
 @ExtendWith(SpringExtension.class)
 public class HelloControllerTest {
 

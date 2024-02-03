@@ -1,5 +1,6 @@
 package com.boya.springboot.domain.posts;
 
+import com.boya.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,7 +13,7 @@ import javax.persistence.Id;
 @Getter // Lombok annotation
 @NoArgsConstructor // Lombok annotation , 기본 생성자 자동 추가
 @Entity // JPA annotation , 테이블과 링크될 클래스임을 나타냄
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     /* Posts 클래스는 DB 테이블과 매칭될 클래스로 Entity 클래스라고도 함
        JPA 사용 시 DB 데이터에 작업할 경우 쿼리를 사용하지 않고 Entity 클래스의 수정을 통해 작업함
@@ -36,6 +37,11 @@ public class Posts {
         this.title = title;
         this.content = content;
         this.author = author;
+    }
+
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
     }
 
 }
