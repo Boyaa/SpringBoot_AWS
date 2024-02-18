@@ -1,5 +1,6 @@
 package com.boya.springboot.domain.posts;
 
+import com.boya.springboot.domain.posts.Posts;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
