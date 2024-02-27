@@ -25,7 +25,7 @@ public class PostsRepositoryTest {
     }
 
     @Test
-    public void 시글저장_불러오기() {
+    public void 게시글저장_불러오기() {
 
         // given
         String title = "테스트 제목" ;
@@ -33,7 +33,7 @@ public class PostsRepositoryTest {
 
         postsRepository.save(Posts.builder()  // .save() insert/update 쿼리 실행
                                     .title(title)
-                                    .author("boya")
+                                    .author("author")
                                     .content(content)
                                     .build()   );
 
